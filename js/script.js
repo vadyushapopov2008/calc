@@ -6,14 +6,10 @@ let resultBtn8 = document.querySelector('#btn:hover');
 let inputResult = document.querySelector('#result');
 
 number1.style = `
-border: 2px dotted red;
-font-size: 22px;
-color: red;
+border: 3px dotted red;
 `
 number2.style = `
-border: 2px dotted green;
-font-size: 22px;
-color: red;
+border: 3px dotted green;
 `
 resultBtn.style = `
 font-size: 25px;
@@ -46,7 +42,7 @@ function getMul(num1, num2) {
 function getDiv(num1, num2) {
     return num1 / num2;
 }
-function getSqrt(num1) {
+function getSqrt(num1, num2) {
     return num1**(1/2);
 }
 function getDeg(num1, num2) {
@@ -62,7 +58,7 @@ function getCos(num1) {
     return cos(num1)
 }
 resultBtn.addEventListener('click', function(){
-    inputResult.style.border = `2px dotted gold`
+    inputResult.style.border = `3px dotted #c86800`
     let num1 = Number(number1.value);
     let num2 = Number(number2.value);
     let operation = selectOperation.value;
@@ -85,7 +81,7 @@ resultBtn.addEventListener('click', function(){
             break;
         case '%': inputResult.value = getRem(num1, num2);
             break;
-            case 'cos': inputResult.value = getCos(num1);
+        case 'cos': inputResult.value = getCos(num1);
             break;
     }
     switch(toolbar) {
