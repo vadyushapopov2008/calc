@@ -58,6 +58,9 @@ function getDeg(num1, num2) {
 function getRem(num1, num2) {
     return num1%num2;
 }
+function getCos(num1) {
+    return cos(num1)
+}
 resultBtn.addEventListener('click', function(){
     inputResult.style.border = `2px dotted gold`
     let num1 = Number(number1.value);
@@ -81,6 +84,8 @@ resultBtn.addEventListener('click', function(){
         case '^': inputResult.value = getDeg(num1, num2);
             break;
         case '%': inputResult.value = getRem(num1, num2);
+            break;
+            case 'cos': inputResult.value = getCos(num1);
             break;
     }
     switch(toolbar) {
